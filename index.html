@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cek Pulsa & Kuota Operator Indonesia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a5cff" />
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      background: linear-gradient(135deg,#0a5cff,#2563eb);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #111827;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.3);
+      text-align: center;
+    }
+    .card h3 { margin: 10px 0; }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📱 Cek Pulsa & Kuota</h1>
+  <p>XL • Axis • Telkomsel • Indosat</p>
+</header>
+
+<main>
+  <!-- XL -->
+  <div class="card">
+    <h3>XL / AXIS</h3>
+    <button onclick="location.href='tel:*123#'">Cek Pulsa</button>
+    <button onclick="location.href='tel:*123#'">Cek Kuota</button>
+    <button onclick="location.href='https://my.xl.co.id'">Website myXL</button>
+  </div>
+
+  <!-- Telkomsel -->
+  <div class="card">
+    <h3>Telkomsel</h3>
+    <button onclick="location.href='tel:*888#'">Cek Pulsa</button>
+    <button onclick="location.href='tel:*888#'">Cek Kuota</button>
+    <button onclick="location.href='https://www.telkomsel.com'">Website Telkomsel</button>
+  </div>
+
+  <!-- Indosat -->
+  <div class="card">
+    <h3>Indosat / Tri</h3>
+    <button onclick="location.href='tel:*123#'">Cek Pulsa</button>
+    <button onclick="location.href='tel:*123#'">Cek Kuota</button>
+    <button onclick="location.href='https://im3.id'">Website Indosat</button>
+  </div>
+
+  <!-- CS -->
+  <div class="card">
+    <h3>Layanan Pelanggan</h3>
+    <button onclick="location.href='tel:817'">CS XL</button>
+    <button onclick="location.href='tel:188'">CS Telkomsel</button>
+    <button onclick="location.href='tel:185'">CS Indosat</button>
+  </div>
+</main>
+
+<footer>
+  Website ini bukan situs resmi operator. <br>
+  Dibuat untuk membantu akses USSD & informasi.
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
